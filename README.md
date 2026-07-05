@@ -14,7 +14,7 @@ Only use it against targets you are authorized to test.
 ## Build
 
 ```
-go build -o spahunter ./cmd/spahunter
+go build -o spahunter .
 ```
 
 Requires Go 1.21+. No external dependencies — standard library only (see
@@ -92,7 +92,7 @@ served from multiple hosts/subdomains/environments is written to disk
 ## Project layout
 
 ```
-cmd/spahunter/          CLI entry point
+main.go                 CLI entry point
 internal/
   model/                shared structs (no cross-package cycles)
   urlutil/              normalization, resolution, dedup
